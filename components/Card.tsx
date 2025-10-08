@@ -1,0 +1,39 @@
+import React from "react";
+import { Image, Text, View } from "react-native";
+import { globalStyles } from "../styles";
+import { StyleSheet } from "react-native";
+import { cardInfo } from "../data/AboutMe";
+
+const Card = () => {
+  return (
+    <View style={styles.container}>
+      <Image style={globalStyles.avatar} source={cardInfo.image} />
+      <View style={styles.card}>
+        <Text style={styles.title}>{cardInfo.title}</Text>
+        <Text>{cardInfo.description}</Text>
+      </View>
+    </View>
+  );
+};
+
+export default Card;
+
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  avatar: globalStyles.avatar,
+  card: {
+    margin: 10,
+    backgroundColor: "lightgray",
+    padding: 10,
+    borderRadius: 10,
+    width: "70%",
+  },
+  title: {
+    textAlign: "center",
+    fontWeight: "700",
+    fontSize: 20,
+  },
+});
