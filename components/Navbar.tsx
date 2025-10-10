@@ -1,16 +1,16 @@
 import React from "react";
-import { Button, Pressable, Text, View } from "react-native";
+import { Button, Pressable, StyleSheet, Text, View } from "react-native";
 import { globalStyles } from "../styles";
 
 const Navbar: React.FC<{ setDisplayMyQR: (value: boolean) => void }> = ({
   setDisplayMyQR,
 }) => {
   return (
-    <View style={globalStyles.topContainer}>
-      <Text style={globalStyles.firsttoprowContainer}>My Portfolio App</Text>
-      <View style={globalStyles.rowTopSecondContainer}>
+    <View style={styles.navbarContainer}>
+      <Text style={styles.navbarTitle}>My Portfolio App</Text>
+      <View style={styles.navbarButtonsContainer}>
         <Pressable
-          style={globalStyles.buttonruta}
+          style={styles.navbarButton}
           onPress={() => setDisplayMyQR(true)}
         >
           <Text
@@ -38,3 +38,27 @@ const Navbar: React.FC<{ setDisplayMyQR: (value: boolean) => void }> = ({
 };
 
 export default Navbar;
+
+const styles = StyleSheet.create({
+  navbarContainer: {
+    height: "15%",
+    paddingTop: 50,
+    width: "100%",
+  },
+  navbarTitle: {
+    backgroundColor: "gray",
+    textAlign: "center",
+    fontWeight: "bold",
+    textAlignVertical: "center",
+    fontSize: 30,
+  },
+  navbarButtonsContainer: {
+    flexDirection: "row",
+    backgroundColor: "darkgray",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  navbarButton: {
+    width: "50%",
+  },
+});

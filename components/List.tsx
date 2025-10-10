@@ -9,7 +9,7 @@ const List = () => {
       <Text style={styles.title}>{interests.title}</Text>
       <ScrollView style={styles.scrollContainer}>
         {interests.list.map((item, index) => (
-          <Text key={index} style={globalStyles.cosasQmeGustanMuxoEstails}>
+          <Text key={index} style={globalStyles.interestsList}>
             {item}
           </Text>
         ))}
