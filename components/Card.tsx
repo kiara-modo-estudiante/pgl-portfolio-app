@@ -1,16 +1,15 @@
 import React from "react";
-import { Image, Text, View } from "react-native";
+import { Image, Text, View, StyleSheet } from "react-native";
 import { lightColorPalette } from "../styles";
-import { StyleSheet } from "react-native";
-import { cardInfo } from "../data/AboutMe";
+import { CardItem } from "../types/CardItem";
 
-const Card = () => {
+const Card: React.FC<CardItem> = ({ title, imageSource, bodyText }) => {
   return (
     <View style={styles.container}>
-      <Image style={styles.avatar} source={cardInfo.image} />
+      <Image style={styles.avatar} source={imageSource} />
       <View style={styles.card}>
-        <Text style={styles.title}>{cardInfo.title}</Text>
-        <Text>{cardInfo.description}</Text>
+        <Text style={styles.title}>{title}</Text>
+        <Text>{bodyText}</Text>
       </View>
     </View>
   );

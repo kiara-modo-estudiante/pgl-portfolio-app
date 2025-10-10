@@ -1,4 +1,4 @@
-export const cardInfo = {
+export const aboutMeCard = {
   image: require("../assets/Kiara.png"),
   title: "Descripción sobre mí!",
   description:
