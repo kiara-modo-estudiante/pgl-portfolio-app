@@ -1,24 +1,21 @@
 export const cardInfo = {
-  image: require("../assets/SofyanAmrabat.jpg"),
+  image: require("../assets/Kiara.png"),
   title: "Descripción sobre mí!",
   description:
-    "Soy profe y me gusta mi trabajo aunque a veces me de por enrevesar prácticas para mis queridos alumnos",
+    "Desarrolladora Junior por la tarde.\nEstudiante por la mañana.\nBatman por la noche.",
 };
 
 export const interests = {
   title: "Cosas que me gustan mucho:",
   list: [
-    "Salir a pasear",
-    "Senderismo",
-    "Ir a la playita",
-    "Domingos de misa",
-    "La guitarrita",
-    "El monte con lluvia",
-    "Viajar",
-    "Música variadita",
-    "Anime",
-    "Ducharme",
-    "Videojuegos",
-    "Ir de cenar romántica",
+    "Construir código rechulón",
+    "Subir y bajar montañas",
+    "Perderme saliendo a correr",
+    "Bucear entre tiburones y mantas",
+    "Viajar sin dinero",
+    "Quedarme pobre comiendo rico",
+    "Saberlo todo",
+    "Mi mujer",
+    "El color verde",
   ],
 };
