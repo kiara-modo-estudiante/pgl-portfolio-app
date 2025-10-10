@@ -18,7 +18,6 @@ export default Repo;
 const styles = StyleSheet.create({
   qrCode: {
     justifyContent: "center",
-    borderWidth: 1,
     width: "100%",
     height: "100%",
     alignItems: "center",

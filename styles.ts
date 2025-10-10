@@ -20,8 +20,6 @@ export const globalStyles = StyleSheet.create({
   },
   body: {
     width: "100%",
-    borderWidth: 2,
-    borderColor: lightColorPalette.border,
     alignItems: "center",
     justifyContent: "space-between",
     height: "85%",

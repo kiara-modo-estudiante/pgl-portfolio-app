@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, Text, View } from "react-native";
-import { globalStyles, lightColorPalette } from "../styles";
+import { lightColorPalette } from "../styles";
 import { StyleSheet } from "react-native";
 import { cardInfo } from "../data/AboutMe";
 

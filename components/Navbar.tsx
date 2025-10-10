@@ -1,6 +1,6 @@
 import React from "react";
-import { Button, Pressable, StyleSheet, Text, View } from "react-native";
-import { globalStyles, lightColorPalette } from "../styles";
+import { Pressable, StyleSheet, Text, View } from "react-native";
+import { lightColorPalette } from "../styles";
 
 const Navbar: React.FC<{ setDisplayMyQR: (value: boolean) => void }> = ({
   setDisplayMyQR,
