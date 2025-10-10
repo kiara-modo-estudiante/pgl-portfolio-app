@@ -1,40 +1,41 @@
 import { StyleSheet } from "react-native";
 
+export const lightColorPalette = {
+  primary: "#80A1BA",
+  secondary: "#91C4C3",
+  background: "#FFF7DD",
+  text: "#333333",
+  border: "#ffffff",
+  accent: "#134686",
+  lightGray: "#d3d3d3",
+  darkGray: "#7f8c8d",
+};
+
 export const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: lightColorPalette.background,
     alignItems: "center",
     justifyContent: "center",
   },
   body: {
     width: "100%",
     borderWidth: 2,
-    borderColor: "black",
+    borderColor: lightColorPalette.border,
     alignItems: "center",
     justifyContent: "space-between",
     height: "85%",
   },
-  interestsList: {
-    borderColor: "black",
+  list: {
+    borderColor: lightColorPalette.border,
     borderWidth: 1,
     borderStyle: "dashed",
     padding: 20,
-    color: "darkred",
+    color: lightColorPalette.text,
     textAlign: "center",
     fontWeight: "bold",
     fontStyle: "italic",
     fontSize: 16,
-    backgroundColor: "silver",
-  },
-  shadoxboxing: {
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 7,
-    },
-    shadowOpacity: 0.43,
-    shadowRadius: 9.51,
-    elevation: 15,
+    backgroundColor: lightColorPalette.lightGray,
   },
 });

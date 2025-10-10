@@ -1,6 +1,6 @@
 import React from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
-import { globalStyles } from "../styles";
+import { globalStyles, lightColorPalette } from "../styles";
 import { interests } from "../data/AboutMe";
 
 const List = () => {
@@ -9,7 +9,7 @@ const List = () => {
       <Text style={styles.title}>{interests.title}</Text>
       <ScrollView style={styles.scrollContainer}>
         {interests.list.map((item, index) => (
-          <Text key={index} style={globalStyles.interestsList}>
+          <Text key={index} style={globalStyles.list}>
             {item}
           </Text>
         ))}
@@ -22,7 +22,7 @@ export default List;
 
 const styles = StyleSheet.create({
   title: {
-    color: "black",
+    color: lightColorPalette.text,
     fontWeight: "900",
     textTransform: "capitalize",
     fontSize: 20,

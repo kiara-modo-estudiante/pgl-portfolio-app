@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Pressable, StyleSheet, Text, View } from "react-native";
-import { globalStyles } from "../styles";
+import { globalStyles, lightColorPalette } from "../styles";
 
 const Navbar: React.FC<{ setDisplayMyQR: (value: boolean) => void }> = ({
   setDisplayMyQR,
@@ -13,25 +13,14 @@ const Navbar: React.FC<{ setDisplayMyQR: (value: boolean) => void }> = ({
           style={styles.navbarButton}
           onPress={() => setDisplayMyQR(true)}
         >
-          <Text
-            style={{
-              ...{
-                color: "white",
-                fontWeight: "bold",
-                textTransform: "uppercase",
-              },
-              ...globalStyles.shadoxboxing,
-            }}
-          >
-            Mi info
-          </Text>
+          <Text style={styles.navbarText}>Mi info</Text>
         </Pressable>
-        <Button
+        <Pressable
+          style={styles.navbarButton}
           onPress={() => setDisplayMyQR(false)}
-          title="Mi Repo"
-          color="light-gray"
-          accessibilityLabel="Un botón pal QR"
-        />
+        >
+          <Text style={styles.navbarText}>Mi Repo</Text>
+        </Pressable>
       </View>
     </View>
   );
@@ -46,19 +35,35 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   navbarTitle: {
-    backgroundColor: "gray",
+    backgroundColor: lightColorPalette.primary,
     textAlign: "center",
     fontWeight: "bold",
     textAlignVertical: "center",
     fontSize: 30,
+    padding: 8,
   },
   navbarButtonsContainer: {
     flexDirection: "row",
-    backgroundColor: "darkgray",
+    backgroundColor: lightColorPalette.secondary,
     justifyContent: "center",
     alignItems: "center",
   },
   navbarButton: {
     width: "50%",
+    padding: 10,
+  },
+  navbarText: {
+    color: lightColorPalette.text,
+    fontWeight: "bold",
+    textAlign: "center",
+    textTransform: "uppercase",
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 7,
+    },
+    shadowOpacity: 0.43,
+    shadowRadius: 9.51,
+    elevation: 15,
   },
 });

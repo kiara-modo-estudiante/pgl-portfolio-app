@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, Text, View } from "react-native";
-import { globalStyles } from "../styles";
+import { globalStyles, lightColorPalette } from "../styles";
 import { StyleSheet } from "react-native";
 import { cardInfo } from "../data/AboutMe";
 
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
   card: {
     margin: 10,
-    backgroundColor: "lightgray",
+    backgroundColor: lightColorPalette.secondary,
     padding: 10,
     borderRadius: 10,
     width: "70%",
