@@ -25,6 +25,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": ["expo-router"],
+    "scheme": "portfolio-app",
+    "experiments": { "typedRoutes": true }
   }
 }
