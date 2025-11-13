@@ -1,32 +1,28 @@
 import React from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import { lightColorPalette } from "../styles";
+import { useRouter } from "expo-router";
+import { lightColorPalette } from "../theme/styles";
 
-const Navbar: React.FC<{ setDisplayMyQR: (value: boolean) => void }> = ({
-  setDisplayMyQR,
-}) => {
+export default function Navbar() {
+  const router = useRouter();
+
   return (
     <View style={styles.navbarContainer}>
       <Text style={styles.navbarTitle}>My Portfolio App</Text>
       <View style={styles.navbarButtonsContainer}>
-        <Pressable
-          style={styles.navbarButton}
-          onPress={() => setDisplayMyQR(true)}
-        >
+        <Pressable style={styles.navbarButton} onPress={() => router.push("/")}>
           <Text style={styles.navbarText}>Mi info</Text>
         </Pressable>
         <Pressable
           style={styles.navbarButton}
-          onPress={() => setDisplayMyQR(false)}
+          onPress={() => router.push("/repo")}
         >
           <Text style={styles.navbarText}>Mi Repo</Text>
         </Pressable>
       </View>
     </View>
   );
-};
-
-export default Navbar;
+}
 
 const styles = StyleSheet.create({
   navbarContainer: {
