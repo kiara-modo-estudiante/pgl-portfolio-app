@@ -1,7 +1,7 @@
 import React from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
-import { globalStyles, lightColorPalette } from "../styles";
-import { interests } from "../data/AboutMe";
+import { globalStyles, lightColorPalette } from "../theme/styles";
+import { interests } from "../data/about";
 
 const List = () => {
   return (
