@@ -2,10 +2,10 @@ import React from "react";
 import Card from "../components/Card";
 import List from "../components/List";
 import { View } from "react-native";
-import { globalStyles } from "../styles";
-import { aboutMeCard } from "../data/AboutMe";
+import { globalStyles } from "../theme/styles";
+import { aboutMeCard } from "../data/about";
 
-const AboutMe = () => {
+export default function Index() {
   return (
     <View style={globalStyles.body}>
       <Card
@@ -16,6 +16,4 @@ const AboutMe = () => {
       <List />
     </View>
   );
-};
-
-export default AboutMe;
+}
