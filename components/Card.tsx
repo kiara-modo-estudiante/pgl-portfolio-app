@@ -1,7 +1,7 @@
 import React from "react";
 import { Image, Text, View, StyleSheet } from "react-native";
 import { lightColorPalette } from "../theme/styles";
-import { CardItem } from "../types/CardItem";
+import { CardItem } from "../types/card";
 
 const Card: React.FC<CardItem> = ({ title, imageSource, bodyText }) => {
   return (
